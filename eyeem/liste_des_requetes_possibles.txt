@@ -1,0 +1,65 @@
+Albums	
+GET	/albums
+GET	/albums/recommended
+GET	/albums/{id}
+GET	/albums/{id}/photos
+PUT	/album/{id}/photos/{photo_id}
+DELETE	/album/{id}/photos/{photo_id}
+GET	/albums/{id}/contributors
+GET	/albums/{id}/contributors/{user_id}
+POST	/album/{id}/share
+Photos	
+GET	/photos
+POST	/photos
+POST	/photos/upload
+GET	/photos/{id}
+DELETE	/photos/{id}
+PUT	/photos/{id}
+GET	/photos/{id}/likers
+GET	/photos/{id}/likers/{user_id}
+PUT	/photos/{id}/likers/{user_id}
+DELETE	/photos/{id}/likers/{user_id}
+GET	/photos/{id}/comments
+POST	/photos/{id}/comments
+GET	/photos/{id}/comments/{comment_id}
+DELETE	/photos/{id}/comments/{comment_id}
+PUT	/photos/{id}/albums/{album_id}
+DELETE	/photos/{id}/albums/{album_id}
+POST	/photos/{id}/topics
+POST	/photos/{id}/flag
+POST	/photos/{id}/share
+GET	/photos/bgImages
+Users	
+GET	/users
+POST	/users/{id}
+GET	/users/{id}
+GET	/users/{id}/photos
+GET	/users/{id}/likedPhotos
+GET	/users/{id}/friendsPhotos
+GET	/users/{id}/feed
+GET	/users/{id}/friends
+POST	/users/{id}/friends
+GET	/users/{id}/friend/{friend_id}
+DELETE	/users/{id}/friend/{friend_id}
+GET	/users/{id}/followers
+GET	/users/{id}/followers/{friend_id}
+GET	/users/{id}/topics
+GET	/users/{id}/socialMedia
+POST	/users/{id}/socialMedia/{service}
+DELETE	/users/{id}/socialMedia/{service}
+PUT	/users/{id}/socialMedia/{service}
+POST	/users/{id}/newsSettings
+GET	/users/{id}/newsSettings
+POST	/users/{id}/share
+Venues	
+POST	/venues
+GET	/venues/foursquareToken
+Search	
+GET	/search
+News	
+GET	/news
+GET	/news/{id}
+POST	/news
+PUT	/news/{id}
+Topics	
+GET	/topics

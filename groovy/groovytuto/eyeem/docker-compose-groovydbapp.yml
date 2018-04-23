@@ -1,0 +1,26 @@
+# @file: docker-compose-groovydbapp.yml
+# @author: Thierry JEAN-LOUIS
+# @version: 0.1
+# @date: 07.12.2017
+# @Desc: Docker compose file for MS SQL DB services.
+
+version: 3
+	services:
+		web:
+			# Image details
+			image: thierryjl/scanaki_first_repo:mssql-server-linux
+			deploy:
+				replicas: 2
+				ressources:
+					limits:
+						cpus: "0.1"
+						memory: "50M"
+				restart_policy:
+					condition: on-failure
+			ports:
+				- "1433:1433"
+			networks:
+				- webnet
+networks:
+	webnet:
+

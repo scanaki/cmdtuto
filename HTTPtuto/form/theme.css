@@ -1,0 +1,94 @@
+body {
+	background-color: black;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+p {
+	font-family: "cambria", "verdana", "courrier new";
+	font-family: 1em;
+	color: DarkBlue;
+	letter-spacing: 1px;
+}
+
+p#time {
+	font-family: "Courrier New";
+	color: DarkGreen;
+}
+
+a:link {
+	text-decoration: none;
+}
+
+a:hover {
+	color: tomato;
+}
+
+button:hover {
+	color: tomato;	
+}
+
+.page {
+	background-color: lightslategrey;
+	border: 1px solid white;
+	width: 1175px;
+	margin-top: 25px;
+	margin-left: 25px;
+	padding: 25px;
+}
+
+nav {
+	float: left;
+	width: 150px;
+	border: 1px solid navy;
+	vertical-align: top;
+}
+
+nav a {
+	display: block;
+}
+
+nav li {
+	text-decoration: none;
+	color: CornflowerBlue;
+	/* display: inline-block; */
+	/* border: 1px solid darkblue; */
+	padding: 10px;
+}
+
+nav li:hover {
+	background-color: white;
+	letter-spacing: 1px;
+}
+
+section {
+	border: 1px solid navy;
+	margin-left: 170px;
+	padding: 10px;
+	display: block;
+	vertical-align: top;
+}
+
+article p {
+	text-align: justify;
+	text-justify: inter-word;
+}
+
+footer p {
+	text-align: center;
+}
+
+footer a {
+	text-decoration: none;
+	color: orange;
+}
+
+
+footer a:hover {
+	letter-spacing: 2px;
+}
+
+
+
+

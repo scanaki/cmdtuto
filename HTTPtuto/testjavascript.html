@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<style>
+body {
+	background-color: tomato;
+}
+
+h1 {
+	color: powderblue;
+	font-family: "verdana";
+	font-size: 1.3em;
+	padding: 3px;
+}
+
+p {
+	font-family: "cambria", "courrier new";
+	font-size: 1em;
+	background-color: white;
+	color: navy;
+	border: 2px solid navy;
+	padding: 3px;
+}
+
+p#heure {
+	color: lightblue;
+	font-family: courier;
+}
+
+p#demo {
+	font-family: cambria, verdana, courier;
+    font-size: 1em;
+    color: darkblue;
+    font-variant: small-caps;
+    letter-spacing: 1px;
+}
+
+
+</style>
+</head>
+<body>
+
+
+<h1 id="demo">This is a Heading</h1>
+<p>This is a paragraph.</p>
+
+<script>
+function myfunction() {
+	var x = document.getElementById("demo");
+    x.style = "background-color:lightblue;color:navy;"; 
+	document.getElementById("heure").innerHTML = Date();
+}
+</script>
+
+<button onclick="myfunction()">Click me</button>
+<p id="heure"></p>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<STYLE>
+button {
+	color: darkblue;
+}
+
+button:hover {
+	color: tomato;
+}
+
+input {
+	background-color: silver;
+    color: darkblue;
+    font-variant: small-caps;
+    text-spacing: 1px;
+}
+
+input:hover {
+	color: tomato;
+}
+
+form {
+	background-color: lightblue;
+    padding: 5px;
+    margin: 10px;
+    border: 1px dashed darkblue;
+}
+
+form#prenom:hover {
+	border: 2px solid darkgreen;
+}
+
+</STYLE>
+<script>
+function validateForm() {
+    var x = document.forms["deuxieme"]["fnom"].value;
+    var y = document.forms["deuxieme"]["fprenom"].value;
+    if (x == "" || y == "") {
+        alert("Le nom et prenom doivent etre rempli!");
+        return false;
+    }
+}
+</script>
+</head>
+<body>
+
+<form id="prenom" name="deuxieme" action="" target="_blank"
+onsubmit="return validateForm()" method="post">
+Nom: <input type="text" name="fnom"><br>
+Prenom: <input type="text" name="fprenom"><br>
+<input type="submit" value="ok">
+</form>
+
+</body>
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<!--	@file:htmlblock.html
+		@author: Thierry JEAN-LOUIS
+		@date: 18.12.2017
+		@desc: Tutoriel sur les block HTML. Petite template page web.
+-->
+<html lang="fr">
+<head>
+<meta charset="utf8"/>
+<title>Ma template - HTML Block</title>
+<!-- STYLE  -->
+<style>
+	body {}
+	header { 
+		display: block; 
+		width: 100%; 
+		padding-top: 30px;
+		margin-bottom: 20px;
+	}
+	header h1, h2 {
+		padding-left: 60px;
+		margin: 0px;
+	}
+
+	/* SHADOW BOX
+	nav { 
+		background-color: rgba(65,105,225,0.6);
+		box-shadow:0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19);
+		border-radius: 4px;
+	}
+	*/
+	nav {
+		position: -webkit-sticky;
+		position: sticky;
+		top: 0;
+	}
+
+	nav a { 
+		font-variant: small-caps; 
+		text-decoration: none;
+		letter-spacing: 1px;
+	}
+	nav li { list-style-type: none; }
+	.menu_top li {
+		display: inline-block;
+		padding: 8px;
+		margin-right: 10px;
+	}
+
+	.menu_top, .menu_top li {
+		text-align: center;
+	}
+
+	.menu_top {
+		width: 100%;
+	}
+
+	.menu_left {
+		float: left;
+		margin-left: 10px;
+		margin-right: 30px;
+	}
+
+	.menu_right {
+		float: right;
+		margin-left: 30px;
+		margin-right: 10px;
+	}
+
+	.menu_left, .menu_right {
+		width: 180px;
+	}
+
+	.menu_left li, .menu_right li {
+		margin-bottom: 8px;
+	}
+
+	section { 
+		display: block;
+		margin-left: 200px;
+		margin-right: 200px;
+	}
+	aside { 
+		padding: 0px 20px 20px; 
+		visibility: hidden; 
+	/*	position: -webkit-sticky; */
+	/*	position: sticky; */
+	/*	top: 30px; */
+	}
+
+	article { 
+		margin-bottom: 50px; 
+		/*padding: 20px;*/ 
+		padding-left: 20px; 
+		padding-right: 20px; 
+		display: block;
+	}
+
+	/*
+	article:nth-child(even) {
+		background-color: lightgrey;
+		color: white;
+	}
+	*/
+
+	article table { 
+		width: 100%; 
+		border-collapse: collapse; 
+		background-color: AliceBlue;
+		font-family: Arial;
+		border: 1px solid grey; 
+	}
+
+	article th { 
+		background-color: navy; 
+		color: white; 
+		font-variant: "small-caps";
+		border: 1px solid grey; 
+	}
+
+	.left { text-align: left; }
+	.right { text-align: right; }
+	.center { text-align: center; }
+
+	article th, td { padding: 4px; }
+	article tr:nth-child(even) { background-color: royalblue; }
+	article tr:hover { background-color: tomato;  color: white; }
+	article h1 {
+		text-transform: uppercase;
+		letter-spacing: 3px;
+	}
+
+	article p {
+		text-align: justify;
+		text-justify: inter-word;
+	}
+
+	article img {
+		float: right;
+	}
+
+	footer { text-align: center; }
+	footer a {
+		font-variant: small-caps; 
+		text-decoration: none;
+		letter-spacing: 1px;
+	}
+	a:hover {
+		color: tomato;
+		border-bottom: 1px solid royalblue;
+		letter-spacing: 2px;
+	}
+</style>
+<!-- JAVASCRIPT  -->
+<script>
+function myAproposON() {
+	var x = document.getElementById('myAside');
+	if (x == "") {
+		alert("Debug de la fonction!");
+	}
+	x.style.visibility = "visible";
+}
+
+function myAproposOFF() {
+	var x = document.getElementById('myAside');
+	if (x == "") {
+		alert("Debug de la fonction!");
+	}
+	x.style.visibility = "hidden";
+}
+</script>
+</head>
+<!-- BODY  -->
+<body>
+	<!-- En-têtes de la page -->
+	<header>
+		<h1>Mon titre</h1>
+		<h2>Sous-titre</h2>
+	</header>
+	<!-- Menu de la page -->
+	<nav class="menu_top">
+		<ul>
+			<li><a href="#">Acceuil</a></li>
+			<li><a href="#">Présentation</a></li>
+			<li><a href="#">Projets</a></li>
+			<li><a href="#" onmouseover="myAproposON()" onmouseout="myAproposOFF()">A propos</a></li>
+			<!-- <li><a href="#" onmouseover="myApropos()">A propos</a></li> -->
+		</ul>
+	</nav>
+	<!-- Section centrale de la page -->
+	<section>
+		<!-- A propos -->
+		<aside id="myAside">
+			<h1>A propos de l'auteur :</h1>
+			<p>scanaki.</p>
+		</aside>
+		<!-- Les articles de la page (à répéter autant de fois que necessaire) -->
+		<article>
+			<h1>Ceci est le premier article</h1>
+			<p>Il n'est pas toujours évident de savoir quoi dire dans son premier article.
+			De toutes évidences, il ne sera pas aisé de trouver les mots.</p>
+		</article>
+		<!-- Les articles de la page (à répéter autant de fois que necessaire) -->
+		<article>
+			<h1>Ceci est le deuxième article</h1>
+			<p>Là encore, dur dur de trouver du contenu, mais ce n'est pas le principale.<br>
+			Le but est essentiellement d'apprendre en effectuant ce tutoriel, qui pour le coup, est plutôt basic.<br>
+			Le deuxième intérêt lié au premier, est d'apprendre à créer des canevas réutilisables, et d'y appliqué des styles.</p>
+			<p>Il est également bon de savoir qu'un article peut avoir autant de paragraphes que souhaité. Il peut même contenir d'autres objets, tel que:<br>
+				<ul>
+					<li>Des listes comme celle-ci.</li>
+					<li>Des tableaux</li>
+					ou encore, 
+					<li>Des images</li>
+					<li>Et bien d'autres choses.</li>
+				</ul>
+			</p>
+			<p><u>Ceci est un exemple de tableau ajouté :</u><br>
+				<table class="left">
+					<tr>
+						<th>Colonne 1</th>
+						<th>Colonne 2</th>
+						<th>Colonne 3</th>
+						<th>Colonne 4</th>
+					</tr>
+					<tr>
+						<td>Valeur 1</td>
+						<td>Valeur 2</td>
+						<td>Valeur 3</td>
+						<td>Valeur 4</td>
+					</tr>
+					<tr>
+						<td>Valeur 5</td>
+						<td>Valeur 6</td>
+						<td>Valeur 7</td>
+						<td>Valeur 8</td>
+					</tr>
+					<tr>
+						<td>Valeur 9</td>
+						<td>Valeur 10</td>
+						<td>Valeur 11</td>
+						<td>Valeur 12</td>
+					</tr>
+					<tr>
+						<td>Valeur 13</td>
+						<td>Valeur 14</td>
+						<td>Valeur 15</td>
+						<td>Valeur 16</td>
+					</tr>
+				</table>
+			</p>
+		</article>
+	</section>
+	<!-- Pied de page -->
+	<footer>
+		<p>Copyright scanaki - Tous droits réservés<br>
+			<a href="mailto:contact@scanaki.com">contact</a>
+		</p>
+	</footer>
+</body>
+</html>

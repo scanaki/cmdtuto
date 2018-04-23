@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function myCheck() {
+	var x = document.getElementById("myVal");
+    if ( !x.checkValidity() ) {
+    	alert("Valeur en dehors des valeurs possibles!");
+        return false;
+    } else {
+    	document.getElementById("demo").innerHTML = x.value;
+    }
+}
+</script>
+<style>
+body { 
+	background-color: tomato; 
+   margin: 0;
+   width: 100%;
+}
+
+p { 
+	color: white;
+	letter-spacing: 1px;
+   font-family: "Cambria";
+}
+
+div {
+	padding: 35px;
+   display: block;
+   text-align: center;
+   background-color: orange;
+}
+</style>
+</head>
+<body>
+<p>Entrez une valeur et cliquez sur OK :</p>
+<input type="number" id="myVal" max=100>
+<button type="button" onclick="myCheck()">OK</button>
+<p>Si le chiffre est superieur a 100 (Valeur maximum), une erreur sera affichee.</p>
+<div>
+	<p id="demo"></p>
+</div>
+</body>
+</html>
